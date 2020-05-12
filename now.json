@@ -1,6 +1,6 @@
 {
-    "version": 2,
-    "name": "puslc",
+    "version": 1,
+    "name": "porocnazgodba",
     "regions": ["arn1", "cdg1"],
     "builds": [{
         "src": "package.json",
