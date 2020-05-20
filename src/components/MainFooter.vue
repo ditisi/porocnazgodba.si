@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="auto">
+  <v-footer height="auto" padless>
     <v-card class="flex" flat tile>
       <v-card-title class="grey lighten-4">
         <strong class="subheading">Sledite nam na socialnih omrežjih</strong>
@@ -19,9 +19,9 @@
       </v-card-title>
 
       <v-card-actions class="grey darken-3 justify-center white--text">
-        &copy;{{ new Date().getFullYear() }} — <strong>Püšlc</strong>
+        &copy;{{ new Date().getFullYear() }} — <strong>Poročna zgodba</strong>
         <v-spacer></v-spacer>
-        Made with &nbsp;<v-icon size="10px" class="red--text"
+        Made with &nbsp;<v-icon size="10px" class="icon white--text"
           >fas fa-heart</v-icon
         >&nbsp; by &nbsp;<a
           class="link"
@@ -42,11 +42,11 @@ export default {
     icons: [
       {
         img: "fab fa-facebook",
-        href: "http://facebook.com/puslc.deko"
+        href: "http://facebook.com/porocnazgodba"
       },
       {
         img: "fab fa-instagram",
-        href: "http://instagram.com/puslc.deko"
+        href: "http://instagram.com/porocnazgodba"
       }
     ]
   })
@@ -57,5 +57,9 @@ export default {
 a.link {
   color: #e5e9ec !important;
   caret-color: #f4f4f4 !important;
+  padding-left: 5px;
+}
+.icon {
+  width: 20px;
 }
 </style>

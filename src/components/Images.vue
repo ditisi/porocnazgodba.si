@@ -1,28 +1,31 @@
 <template>
-  <v-layout>
-    <v-flex xs12 md10 offset-xs0 offset-md1>
-      <v-container grid-list-sm fluid>
-        <v-layout row wrap>
-          <v-flex v-for="(item, index) in images" :key="index" xs6 md4 d-flex>
+        <v-container fluid>
+          <v-row>
+            <v-col
+               v-for="(item, index) in images"
+               :key="index"
+              class="d-flex child-flex"
+              cols="4"
+              height="150px"
+            >
             <v-card flat tile class="d-flex">
               <v-img
                 :src="item.big"
                 :lazy-src="item.small"
                 aspect-ratio="1"
+                
                 class="grey lighten-2"
               >
                 <template v-slot:placeholder>
-                  <v-layout fill-height align-center justify-center ma-0>
+                  <v-layout fill-height align-center justify-center>
                     <v-progress-circular indeterminate></v-progress-circular>
                   </v-layout>
                 </template>
               </v-img>
             </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-flex>
-  </v-layout>
+            </v-col>
+          </v-row>
+        </v-container>
 </template>
 
 <script>

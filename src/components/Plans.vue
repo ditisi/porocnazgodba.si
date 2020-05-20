@@ -22,12 +22,9 @@
 
             <v-card-title primary-title>
               <div>
-                <h3 class="headline mb-0">Šopki</h3>
+                <h3 class="headline mb-0">Poročni stoli</h3>
                 <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam mauris felis, varius rutrum massa a, dignissim ornare
-                  dui. Cras eget velit eu dui tristique lobortis sit amet vel
-                  tellus.
+                  Izposoja prav prisrcnih pristno starinskih stolov nasih babic
                 </div>
               </div>
             </v-card-title>
@@ -58,10 +55,9 @@
               <div>
                 <h3 class="headline mb-0">Oltar</h3>
                 <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam mauris felis, varius rutrum massa a, dignissim ornare
-                  dui. Cras eget velit eu dui tristique lobortis sit amet vel
-                  tellus.
+                  Izstopajta s prav posebnim dodatkom na vajini poroko.
+                  Geometrijski oltar sestkotne oblike bo vsekakor povzdignil
+                  civilni obred na novo raven.
                 </div>
               </div>
             </v-card-text>
@@ -84,9 +80,9 @@
             </v-img>
             <v-card-title primary-title>
               <div>
-                <h3 class="headline mb-0">Dekor</h3>
+                <h3 class="headline mb-0">Klopi</h3>
                 <div>
-                  Namizna dekoracija
+                  8 klopi za svate na civilnem obredu
                 </div>
               </div>
             </v-card-title>

@@ -29,12 +29,12 @@
         @click="$vuetify.goTo('#intro', options)"
         >{{ appTitle }}</v-toolbar-title
       >
-      <v-spacer class="hidden-md-and-up"></v-spacer>
+      <v-spacer></v-spacer>
 
       <template v-for="(item, index) in navigationItems">
         <v-btn
+          text="true"
           :key="index"
-          flat
           @click="$vuetify.goTo(item.link, options)"
           class="hidden-sm-and-down"
         >
@@ -50,7 +50,7 @@ export default {
   name: "Navigation",
   data() {
     return {
-      appTitle: "Poročna Zgodba",
+      appTitle: "Poročna zgodba",
       drawer: false,
       navigationItems: [
         { title: "Zgodba", link: "#story" },

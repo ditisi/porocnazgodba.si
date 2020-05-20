@@ -1,7 +1,9 @@
 <template>
   <v-container id="story">
     <v-layout column>
-      <v-flex class="display-2 text-xs-center my-5">To je poročna zgodba</v-flex>
+      <v-flex class="display-2 text-xs-center my-5">
+        To je poročna zgodba
+      </v-flex>
       <v-flex>
         <div class="headline mt-3">Lorem ipsum.</div>
         <p class="subheading mt-3">

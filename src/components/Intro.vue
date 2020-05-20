@@ -8,13 +8,13 @@
   >
     <v-layout justify-center align-center column pa-5>
       <div class="display-2 font-weight-black white--text text-xs-center">
-        NARAVA PRIPOVEDUJE
+        ZIVLJENJE PRIPOVEDUJE
       </div>
       <div class="display-4 font-weight-black white--text text-xs-center mb-3">
         ZGODBO
       </div>
       <div class="display-1 font-weight-bold white--text text-xs-center">
-        Vse kar moramo storiti je, da ji prisluhnemo.
+        Nekaj nekaj
       </div>
       <v-btn fab class="button mt-5 grey lighten-4">
         <v-icon large block @click="$vuetify.goTo('#story', options)"
