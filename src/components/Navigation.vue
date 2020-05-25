@@ -56,18 +56,18 @@ export default {
         { title: "Zgodba", link: "#story" },
         { title: "Ponudba", link: "#plans" },
         { title: "Ekipa", link: "#team" },
-        { title: "Kontakt", link: "#contact" }
-      ]
+        { title: "Kontakt", link: "#contact" },
+      ],
     };
   },
   computed: {
     options() {
       return {
         duration: 750,
-        easing: "easeOutQuint"
+        easing: "easeOutQuint",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

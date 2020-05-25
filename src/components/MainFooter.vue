@@ -42,14 +42,14 @@ export default {
     icons: [
       {
         img: "fab fa-facebook",
-        href: "http://facebook.com/porocnazgodba"
+        href: "http://facebook.com/porocnazgodba",
       },
       {
         img: "fab fa-instagram",
-        href: "http://instagram.com/porocnazgodba"
-      }
-    ]
-  })
+        href: "http://instagram.com/porocnazgodba",
+      },
+    ],
+  }),
 };
 </script>
 

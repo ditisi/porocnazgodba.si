@@ -50,48 +50,48 @@ export default {
   components: {
     BlogNavigation: () => import("@/components/blog/BlogNavigation"),
     MainFooter: () => import("@/components/MainFooter"),
-    BlogCard: () => import("@/components/blog/BlogCard")
+    BlogCard: () => import("@/components/blog/BlogCard"),
   },
   data: () => ({
     items: [
       {
         text: "Blog",
         disabled: false,
-        href: "#/blog"
-      }
-    ]
+        href: "#/blog",
+      },
+    ],
   }),
-  mounted: function() {
+  mounted: function () {
     this.items.push({
       text: this.blogPost.title,
-      disabled: true
+      disabled: true,
     });
-    axios.get("http://puslc.diti.si:3030/api/blogs/1").then(response => {
+    axios.get("http://puslc.diti.si:3030/api/blogs/1").then((response) => {
       this.blogPosts = response.data;
     });
   },
   computed: {
     blogPost() {
       let id = parseInt(this.$route.params.id);
-      return this.blogPosts.find(function(blogPost) {
+      return this.blogPosts.find(function (blogPost) {
         return blogPost.id === id;
       });
     },
     lastBlogs() {
       let id = parseInt(this.$route.params.id);
-      let shuffle = function(a) {
+      let shuffle = function (a) {
         for (let i = a.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [a[i], a[j]] = [a[j], a[i]];
         }
         return a;
       };
-      let filteredBlogs = this.blogPosts.filter(function(blogPost) {
+      let filteredBlogs = this.blogPosts.filter(function (blogPost) {
         return blogPost.prominent != true && blogPost.id !== id;
       });
       return shuffle(filteredBlogs).slice(0, 3);
-    }
-  }
+    },
+  },
 };
 </script>
 

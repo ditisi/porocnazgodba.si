@@ -56,26 +56,26 @@ export default {
   methods: {
     formatDate(value) {
       return moment(value, "YYYY-MM-DD HH:ii:ss").format("D.M.Y");
-    }
+    },
   },
   props: {
     size: {
       type: Number,
-      required: true
+      required: true,
     },
     value: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   computed: {
     classes() {
       return {
         md6: this.size === 2,
-        md4: this.size === 3
+        md4: this.size === 3,
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

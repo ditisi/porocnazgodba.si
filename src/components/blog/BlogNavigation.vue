@@ -66,19 +66,19 @@ export default {
       drawer: false,
       navigationItems: [
         { title: "Predstavitev", link: "/" },
-        { title: "Blog", link: "/blog" }
+        { title: "Blog", link: "/blog" },
         //   { title: 'Popvraševanje' }
-      ]
+      ],
     };
   },
   computed: {
     options() {
       return {
         duration: 750,
-        easing: "easeOutQuint"
+        easing: "easeOutQuint",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

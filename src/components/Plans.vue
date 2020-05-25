@@ -110,10 +110,10 @@ export default {
         sopek: require("../assets/img/sopek.jpg"),
         oltar: require("../assets/img/obred.jpg"),
         obleka: require("../assets/img/obleka.jpg"),
-        parallax: require("../assets/img/bg1.jpg")
-      }
+        parallax: require("../assets/img/bg1.jpg"),
+      },
     };
-  }
+  },
 };
 </script>
 

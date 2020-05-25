@@ -37,17 +37,17 @@ export default {
           name: "KARIN KEGEL",
           title: "Idejni vodja",
           text: "Organizirana. Dekle s fotoaparatom. Grafična oblikovalka.",
-          img: require("../assets/img/karin.jpg")
+          img: require("../assets/img/karin.jpg"),
         },
         {
           name: "TOMI MOČNIK",
           title: "Dekor|IT|Logistika",
           text: "Čez dan programer, popoldan čas prživim v delavnici.",
-          img: require("../assets/img/tomi.jpg")
-        }
-      ]
+          img: require("../assets/img/tomi.jpg"),
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

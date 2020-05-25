@@ -60,13 +60,13 @@ export default {
   components: {
     BlogNavigation: () => import("@/components/blog/BlogNavigation"),
     MainFooter: () => import("@/components/MainFooter"),
-    BlogCard: () => import("@/components/blog/BlogCard")
+    BlogCard: () => import("@/components/blog/BlogCard"),
   },
   data: () => ({
     blogPosts: [],
     layout: [2, 2, 1, 2, 2, 3, 3, 3, 3, 3, 3],
     page: 1,
-    numberOfBlogs: 11
+    numberOfBlogs: 11,
   }),
   computed: {
     // ...mapState(['blogPosts']),
@@ -77,17 +77,17 @@ export default {
       const start = (this.page - 1) * this.numberOfBlogs;
       const stop = this.page * this.numberOfBlogs;
       return this.blogPosts.slice(start, stop);
-    }
+    },
   },
   mounted() {
-    axios.get("http://puslc.diti.si:3030/api/blogs/").then(response => {
+    axios.get("http://puslc.diti.si:3030/api/blogs/").then((response) => {
       this.blogPosts = response.data;
     });
   },
   watch: {
     page() {
       window.scrollTo(0, 0);
-    }
-  }
+    },
+  },
 };
 </script>

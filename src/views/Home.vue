@@ -34,8 +34,8 @@ export default {
     Images,
     Team,
     Contact,
-    MainFooter
-  }
+    MainFooter,
+  },
 };
 </script>
 

@@ -32,10 +32,10 @@ export default {
     options() {
       return {
         duration: 750,
-        easing: "easeOutQuint"
+        easing: "easeOutQuint",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

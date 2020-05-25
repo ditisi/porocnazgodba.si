@@ -10,7 +10,7 @@
       >
         <template v-slot:icon>
           <v-avatar v-if="avatar">
-            <img src="http://i.pravatar.cc/64">
+            <img src="http://i.pravatar.cc/64" />
           </v-avatar>
         </template>
         <span slot="opposite">
@@ -44,10 +44,10 @@ export default {
           color: "blue lighten-2",
           time: "Izbira datuma",
           title: "Stres?",
-          text: "ibsen"
-        }
-      ]
+          text: "ibsen",
+        },
+      ],
     };
-  }
+  },
 };
 </script>

@@ -8,7 +8,7 @@
   >
     <v-layout justify-center align-center column pa-5>
       <div class="display-4 font-weight-black white--text text-xs-center mb-3">
-        Püšlc
+        Poročna zgodba
       </div>
       <div class="display-1 font-weight-bold white--text text-xs-center">
         Spletna stran v pripravi, do takrat pa nam sledite na socialnih omrezjih
@@ -22,7 +22,7 @@
         <v-btn
           fab
           class="button mt-5 deep-purple lighten-2"
-          href="http://facebook.com/puslc.deko"
+          href="http://facebook.com/porocnazgodba"
           target="_blank"
         >
           <v-icon large color="white" block>fab fa-facebook</v-icon>
@@ -30,7 +30,7 @@
         <v-btn
           fab
           class="button mt-5 deep-purple lighten-2"
-          href="http://instagra.com/puslc.deko"
+          href="http://instagra.com/porocnazgodba"
           target="_blank"
         >
           <v-icon large color="white" block>fab fa-instagram</v-icon>
@@ -46,10 +46,10 @@ export default {
     options() {
       return {
         duration: 750,
-        easing: "easeOutQuint"
+        easing: "easeOutQuint",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

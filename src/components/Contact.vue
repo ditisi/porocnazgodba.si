@@ -58,37 +58,37 @@ export default {
   data: () => ({
     valid: false,
     name: "",
-    nameRules: [v => !!v || "Ime je zahtevano"],
+    nameRules: [(v) => !!v || "Ime je zahtevano"],
     email: "",
     emailRules: [
-      v => !!v || "E-mail je zahtevan",
-      v => /.+@.+/.test(v) || "E-mail mora biti veljaven"
+      (v) => !!v || "E-mail je zahtevan",
+      (v) => /.+@.+/.test(v) || "E-mail mora biti veljaven",
     ],
     date: new Date().toISOString().substr(0, 10),
     select: null,
     eventTypes: ["Poroka", "Rojstni dan", "Zabava", "Poslovni dogodek"],
-    parallax: require("../assets/img/main-bg.jpg")
+    parallax: require("../assets/img/main-bg.jpg"),
   }),
   methods: {
     submit() {
       axios.post(
         "http://puslc.diti.si:3000/api/mail",
         {
-          subject: this.name
+          subject: this.name,
         },
         {
           headers: {
-            "Content-type": "application/x-www-form-urlencoded"
-          }
+            "Content-type": "application/x-www-form-urlencoded",
+          },
         }
       );
-    }
+    },
   },
   computed: {
     computedDateFormattedMomentjs() {
       return this.date ? moment(this.date).format("dddd, MMMM Do YYYY") : "";
-    }
-  }
+    },
+  },
 };
 </script>
 

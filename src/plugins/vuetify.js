@@ -11,8 +11,8 @@ const opts = {
   iconfont: "md",
   lang: {
     locales: { sl },
-    current: "sl"
-  }
+    current: "sl",
+  },
 };
 
 export default new Vuetify(opts);

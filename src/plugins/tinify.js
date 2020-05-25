@@ -4,13 +4,13 @@ tinify.key = "EXU1Z2ETL8ThVZdHg68qIaWTYJD2H2dR";
 var fs = require("fs");
 
 function readFiles(dirname, onFileContent, onError) {
-  fs.readdir(dirname, function(err, filenames) {
+  fs.readdir(dirname, function (err, filenames) {
     if (err) {
       onError(err);
       return;
     }
-    filenames.forEach(function(filename) {
-      fs.readFile(dirname + filename, "utf-8", function(err, content) {
+    filenames.forEach(function (filename) {
+      fs.readFile(dirname + filename, "utf-8", function (err, content) {
         if (err) {
           onError(err);
           return;
@@ -24,10 +24,10 @@ function readFiles(dirname, onFileContent, onError) {
 let folder = "../assets/img/";
 readFiles(
   folder,
-  function(filename) {
+  function (filename) {
     tinify.fromFile(folder + filename).toFile(folder + filename);
   },
-  function(err) {
+  function (err) {
     throw err;
   }
 );
