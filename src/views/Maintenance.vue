@@ -15,7 +15,7 @@
       </div>
       <div class="font-weight-bold white--text text-xs-right">
         <p>
-          Ekipa Püslc
+          Ekipa Poročna zgodba
         </p>
       </div>
       <v-card-title>
