@@ -15,7 +15,7 @@
       </div>
       <div class="font-weight-bold white--text text-xs-right">
         <p>
-          Ekipa Püslc
+          Ekipa Poročna zgodba
         </p>
       </div>
       <v-card-title>
@@ -60,7 +60,16 @@ export default {
   width: 100%;
   height: 100%;
 }
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+}
 .button {
   animation: shadow-pulse 2s infinite;
+  margin: 15px;
 }
 </style>
