@@ -4,7 +4,7 @@
     <intro></intro>
     <story></story>
     <images></images>
-    <timeline></timeline>
+    <!-- <timeline></timeline> -->
     <plans></plans>
     <team></team>
     <contact></contact>
@@ -21,7 +21,7 @@ import Images from "@/components/Images";
 import Plans from "@/components/Plans";
 import Contact from "@/components/Contact";
 import MainFooter from "@/components/MainFooter";
-import Timeline from "@/components/Timeline";
+// import Timeline from "@/components/Timeline";
 
 export default {
   name: "home",
@@ -29,7 +29,7 @@ export default {
     Navigation,
     Intro,
     Story,
-    Timeline,
+    // Timeline,
     Plans,
     Images,
     Team,

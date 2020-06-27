@@ -42,7 +42,7 @@ export default {
         {
           name: "TOMI MOČNIK",
           title: "Dekor|IT|Logistika",
-          text: "Čez dan programer, popoldan čas prživim v delavnici.",
+          text: "Čez dan spletni razvijalec, popoldan čas prživim v delavnici.",
           img: require("../assets/img/tomi.jpg"),
         },
       ],
