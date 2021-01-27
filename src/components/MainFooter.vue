@@ -18,7 +18,7 @@
         </v-btn>
       </v-card-title>
 
-      <v-card-actions class="grey darken-3 justify-center white--text">
+      <v-card-actions class="lower-footer justify-center white--text">
         &copy;{{ new Date().getFullYear() }} — <strong>Poročna zgodba</strong>
         <v-spacer></v-spacer>
         Made with &nbsp;<v-icon size="10px" class="icon white--text"
@@ -61,5 +61,8 @@ a.link {
 }
 .icon {
   width: 20px;
+}
+.lower-footer {
+  background-color: #83a9a4;
 }
 </style>

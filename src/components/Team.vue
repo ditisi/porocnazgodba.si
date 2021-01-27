@@ -1,14 +1,7 @@
 <template>
   <v-container grid-list-md text-xs-center id="team">
     <v-layout>
-      <v-flex
-        v-for="(person, i) in images"
-        :key="`${i}`"
-        xs6
-        sm6
-        md4
-        :class="`offset-md-1`"
-      >
+      <v-flex v-for="(person, i) in images" :key="i" xs4>
         <v-card class="text-md-center">
           <v-img :src="person.img" :aspect-ratio="1 / 1"></v-img>
 
@@ -18,7 +11,7 @@
                 {{ person.name }}
               </h3>
               <span class="person-title">{{ person.title }}</span>
-              <p class="person-info">{{ person.text }}</p>
+              <p class="person-info" v-html="person.text"></p>
             </div>
           </v-card-text>
         </v-card>
@@ -34,9 +27,10 @@ export default {
     return {
       images: [
         {
-          name: "KARIN KEGEL",
+          name: "KARIN KEGEL MOČNIK",
           title: "Idejni vodja|Organizacija|Komunikacija",
-          text: "Organizirana. Dekle s fotoaparatom. Grafična oblikovalka.",
+          text:
+            "Organizirana. Dekle s fotoaparatom.<br /> Grafična oblikovalka.",
           img: require("../assets/img/karin.jpg"),
         },
         {
@@ -44,6 +38,12 @@ export default {
           title: "Dekor|IT|Logistika",
           text: "Čez dan spletni razvijalec, popoldan čas prživim v delavnici.",
           img: require("../assets/img/tomi.jpg"),
+        },
+        {
+          name: "PETRA HEBAR",
+          title: "Marketing|Komunikacija",
+          text: "100% prlečka<br />.",
+          img: require("../assets/img/petra.jpg"),
         },
       ],
     };
