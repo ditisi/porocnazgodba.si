@@ -17,7 +17,6 @@
           <v-icon size="24px">{{ icon.img }}</v-icon>
         </v-btn>
       </v-card-title>
-
       <v-card-actions class="lower-footer justify-center white--text">
         &copy;{{ new Date().getFullYear() }} — <strong>Poročna zgodba</strong>
         <v-spacer></v-spacer>

@@ -1,48 +1,71 @@
 <template>
-  <span>
-    <v-navigation-drawer
-      app
-      v-model="drawer"
-      class="grey lighten-4"
-      dark
-      disable-resize-watcher
-    >
-      <v-list>
-        <template v-for="(item, index) in navigationItems">
-          <v-list-tile :key="index">
-            <v-list-tile-content>
-              {{ item.title }}
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-divider :key="`divider-${index}`"></v-divider>
-        </template>
-      </v-list>
-    </v-navigation-drawer>
-    <v-toolbar app color="grey lighten-4">
-      <v-toolbar-side-icon
-        class="hidden-md-and-up"
-        @click="drawer = !drawer"
-      ></v-toolbar-side-icon>
-      <v-spacer class="hidden-md-and-up"></v-spacer>
+  <div>
+    <v-app-bar fixed :color="color">
       <v-toolbar-title
-        class="page-title"
-        @click="$vuetify.goTo('#intro', options)"
+        class="page-title modernline"
+        @click="$vuetify.goTo('#landing', options)"
         >{{ appTitle }}</v-toolbar-title
       >
       <v-spacer></v-spacer>
 
-      <template v-for="(item, index) in navigationItems">
-        <v-btn
-          text="true"
-          :key="index"
-          @click="$vuetify.goTo(item.link, options)"
-          class="hidden-sm-and-down"
+      <div class="hidden-sm-and-down">
+        <template
+          v-for="(item, index) in navigationItems"
+          class="main-navigation"
         >
-          {{ item.title }}
-        </v-btn>
-      </template>
-    </v-toolbar>
-  </span>
+          <v-btn text :key="index" @click="$vuetify.goTo(item.link, options)">{{
+            item.title
+          }}</v-btn>
+        </template>
+      </div>
+      <div class="hidden-md-and-up">
+        <v-menu offset-y left transition="slide-y-transition">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn fab icon v-bind="attrs" v-on="on">
+              <v-icon>fas fa-ellipsis-v</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item
+              v-for="(item, index) in navigationItems"
+              :key="index"
+              @click="$vuetify.goTo(item.link, options)"
+            >
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+            <!-- Language selection -->
+            <!-- <v-divider></v-divider>
+            <v-list-item
+              v-for="(language, index) in languages"
+              :key="index"
+              @click="changeLanguage(language)"
+            >
+              <v-list-item-title>{{language.text}}</v-list-item-title>
+            </v-list-item> -->
+            <!-- Language selection -->
+          </v-list>
+        </v-menu>
+      </div>
+      <!-- Language selection -->
+      <!--<v-menu offset-y left transition="slide-y-transition">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn v-bind="attrs" v-on="on" text class="language">{{currentPage}}</v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item
+            v-for="(language, index) in languages"
+            :key="index"
+            @click="changeLanguage(language)"
+          >
+            <v-list-item-title>{{language.text}}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>-->
+      <!-- Language selection -->
+    </v-app-bar>
+  </div>
 </template>
 
 <script>
@@ -52,6 +75,7 @@ export default {
     return {
       appTitle: "Poročna zgodba",
       drawer: false,
+      color: "rgba(255, 255, 255, 0.7)",
       navigationItems: [
         { title: "Zgodba", link: "#story" },
         { title: "Ponudba", link: "#plans" },
